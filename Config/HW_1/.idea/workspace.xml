@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40e99e84-f8c9-4af8-a74f-8d44ba684050" name="Changes" comment="" />
+    <list default="true" id="40e99e84-f8c9-4af8-a74f-8d44ba684050" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S" beforeDir="false" afterPath="$PROJECT_DIR$/../../AI-S" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 1/AAPL.csv" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 1/AAPL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 1/GOOGL.csv" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 1/GOOGL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 1/Khisamutdinov_A_Workbook_1.ipynb" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 1/Khisamutdinov_A_Workbook_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 1/MSFT.csv" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 1/MSFT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 1/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 1 ÐÐ_2022.pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 1/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 1 ÐÐ_2022.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 2/Khisamutdinov_A_Workbook_2.ipynb" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 2/Khisamutdinov_A_Workbook_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 2/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 2.pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 2/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 3/Khisamutdinov_A_Workbook_3.ipynb" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 3/Khisamutdinov_A_Workbook_3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 3/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 3-2.pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 3/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 3-2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 4/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 4.pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 4/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 5/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 5 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 5/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 5 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 6/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 6 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸)-2.pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 6/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 6 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸)-2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 7/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 7 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 7/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 7 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AI-S/Практика 8/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 8 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforePathEscaped="$PROJECT_DIR$/../../AI-S/📍Практика 8/Ð Ð°Ð±Ð¾ÑÐ°Ñ ÑÐµÑÑÐ°Ð´Ñ 8 (Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾ÑÑÐ¸).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_2._rand" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_2._rand" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_2._rand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/5.2_2._rand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/students.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/tempCodeRunnerFile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD/2_course/Prak_2/tempCodeRunnerFile.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +48,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -28,30 +63,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python tests.Python tests for TestShellEmulator.TestShellEmulator.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_shell_emulator.TestShellEmulator.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_shell_emulator.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ShellEmulator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.buildfilesinzip.executor&quot;: &quot;Run&quot;,
-    &quot;Python.check_permissions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.emulator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.search.executor&quot;: &quot;Run&quot;,
-    &quot;Python.shell_emulator.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.startup.sh.executor&quot;: &quot;Run&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/arslankhisamutdinov/GitHub-repositories/University/Config/HW_1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Python tests for TestShellEmulator.TestShellEmulator.executor": "Run",
+    "Python tests.Python tests for test_shell_emulator.TestShellEmulator.executor": "Run",
+    "Python tests.Python tests in test_shell_emulator.py.executor": "Run",
+    "Python.ShellEmulator.executor": "Run",
+    "Python.buildfilesinzip.executor": "Run",
+    "Python.check_permissions.executor": "Run",
+    "Python.emulator.executor": "Run",
+    "Python.search.executor": "Run",
+    "Python.shell_emulator.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.startup.sh.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/arslankhisamutdinov/GitHub-repositories/University/Config/HW_1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -191,7 +228,7 @@
       <workItem from="1733219863143" duration="158000" />
       <workItem from="1733220092753" duration="2389000" />
       <workItem from="1733222693853" duration="3093000" />
-      <workItem from="1733770129228" duration="1847000" />
+      <workItem from="1733770129228" duration="2522000" />
     </task>
     <servers />
   </component>
