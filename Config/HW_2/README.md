@@ -20,23 +20,16 @@
 ## Запуск
 
 ### Установка зависимостей:
-
-```bash
-pip3 install -r requirements.txt
-```
+    pip3 install -r requirements.txt
 
 ### Запуск программы:
+    python3 -m src.main \
+      --path-to-program /usr/local/bin/mmdc \
+      --package-name org.springframework.boot:spring-boot-starter \
+      --output-file ./output.mmd \
+      --max-depth 3 \
+      --repo-url https://repo.maven.apache.org/maven2/
 
-```bash
-python3 -m src.main \
-  --path-to-program /usr/local/bin/mmdc \
-  --package-name org.springframework.boot:spring-boot-starter \
-  --output-file ./output.mmd \
-  --max-depth 3 \
-  --repo-url https://repo.maven.apache.org/maven2/
-```
 ### Запуск тестов:
+    python3 -m unittest discover tests
 
-```bash
-python3 -m unittest discover tests
-```
