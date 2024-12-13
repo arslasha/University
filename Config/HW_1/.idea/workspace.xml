@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40e99e84-f8c9-4af8-a74f-8d44ba684050" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/../../AI-S" beforeDir="false" afterPath="$PROJECT_DIR$/../../AI-S" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SIAOD" beforeDir="false" afterPath="$PROJECT_DIR$/../../SIAOD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,38 +37,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Python tests for TestShellEmulator.TestShellEmulator.executor": "Run",
-    "Python tests.Python tests for test_shell_emulator.TestShellEmulator.executor": "Run",
-    "Python tests.Python tests in test_shell_emulator.py.executor": "Run",
-    "Python.ShellEmulator.executor": "Run",
-    "Python.buildfilesinzip.executor": "Run",
-    "Python.check_permissions.executor": "Run",
-    "Python.emulator.executor": "Run",
-    "Python.search.executor": "Run",
-    "Python.shell_emulator.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.startup.sh.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/arslankhisamutdinov/GitHub-repositories/University/Config/HW_1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python tests.Python tests for TestShellEmulator.TestShellEmulator.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_shell_emulator.TestShellEmulator.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_shell_emulator.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ShellEmulator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.buildfilesinzip.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check_permissions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.emulator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.shell_emulator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.startup.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/arslankhisamutdinov/GitHub-repositories/University/Config/HW_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.shell_emulator">
     <configuration name="ShellEmulator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HW_1" />
       <option name="ENV_FILES" value="" />
@@ -174,11 +172,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.shell_emulator" />
         <item itemvalue="Python.ShellEmulator" />
         <item itemvalue="Python tests.Python tests in test_shell_emulator.py" />
         <item itemvalue="Python tests.Python tests for test_shell_emulator.TestShellEmulator" />
         <item itemvalue="Python tests.Python tests for test_shell_emulator.TestShellEmulator" />
-        <item itemvalue="Python.shell_emulator" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +202,8 @@
       <workItem from="1733219863143" duration="158000" />
       <workItem from="1733220092753" duration="2389000" />
       <workItem from="1733222693853" duration="3093000" />
-      <workItem from="1733770129228" duration="3197000" />
+      <workItem from="1733770129228" duration="3878000" />
+      <workItem from="1733826064921" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -214,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733775866566</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1733814275127</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733814275127</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <option name="closed" value="true" />
+      <created>1733826423871</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733826423871</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +240,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HW_1$shell_emulator.coverage" NAME="shell_emulator Coverage Results" MODIFIED="1733772839088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW_1$shell_emulator.coverage" NAME="shell_emulator Coverage Results" MODIFIED="1733826350094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HW_1$.coverage" NAME=" Coverage Results" MODIFIED="1733772848902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HW_1$emulator.coverage" NAME="emulator Coverage Results" MODIFIED="1733217343568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HW_1$search.coverage" NAME="search Coverage Results" MODIFIED="1733186251105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
