@@ -1,4 +1,3 @@
-import argparse
 import unittest
 from unittest.mock import patch
 from src.main import main
@@ -14,11 +13,11 @@ class TestMain(unittest.TestCase):
             mock_args.return_value = argparse.Namespace(
                 path_to_program="/path/to/visualizer",
                 package_name="packageA",
-                output_file="/path/to/output.mmd",
+                output_file="./output.mmd",
                 max_depth=2,
                 repo_url="https://fake.repo.maven/"
             )
             main()
 
-        mock_open.assert_called_once_with("/path/to/output.mmd", "w")
+        mock_open.assert_called_once_with("./output.mmd", "w")
         mock_get_dependencies.assert_called_once_with("packageA")

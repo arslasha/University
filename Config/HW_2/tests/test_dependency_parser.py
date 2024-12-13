@@ -3,7 +3,7 @@ from src.dependency_parser import DependencyParser
 
 class TestDependencyParser(unittest.TestCase):
     def setUp(self):
-        self.parser = DependencyParser("https://fake.repo.maven/", max_depth=2)
+        self.parser = DependencyParser("https://repo.maven.apache.org/maven2/", max_depth=2)
 
     def test_parse_pom(self):
         pom_content = """
