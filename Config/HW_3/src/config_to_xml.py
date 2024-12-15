@@ -26,35 +26,32 @@ def parse_config(content):
 
     def parse_dict(content):
         result = {}
-        # Allow parsing nested dictionaries
         buffer = ""
         nesting = 0
-        for char in content:
-            if char == "{" and nesting == 0:
-                nesting += 1
-                buffer += char
-            elif char == "{" and nesting > 0:
-                nesting += 1
-                buffer += char
-            elif char == "}" and nesting > 1:
-                nesting -= 1
-                buffer += char
-            elif char == "}" and nesting == 1:
-                nesting -= 1
-                buffer += char
-                key, value = re.match(r"(\w+) *= *(.*);", buffer.strip()).groups()
-                result[key.strip()] = parse_value(value.strip())
-                buffer = ""
-            elif nesting > 0:
-                buffer += char
-            elif char == ";":
-                key, value = re.match(r"(\w+) *= *(.*);", buffer.strip()).groups()
-                result[key.strip()] = parse_value(value.strip())
-                buffer = ""
+
+        for line in content.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+
+            if nesting == 0:
+                if line.endswith("{"):
+                    nesting += 1
+                    buffer += line[:-1].strip() + " "
+                else:
+                    key, value = re.match(r"(\w+) *= *(.*);", line).groups()
+                    result[key.strip()] = parse_value(value.strip())
             else:
-                buffer += char
+                if line == "}":
+                    nesting -= 1
+                    result[buffer.strip()] = parse_dict("\n".join(buffer.splitlines()[1:]))
+                    buffer = ""
+                else:
+                    buffer += line + "\n"
+
         if buffer:
-            raise ValueError(f"Invalid dictionary content: {buffer}")
+            raise ValueError(f"Unclosed dictionary or invalid syntax in: {buffer}")
+
         return result
 
     def parse_line(line):
@@ -79,7 +76,7 @@ def parse_config(content):
             buffer = []
         elif line == "}":
             in_dict = False
-            dict_content = " ".join(buffer)
+            dict_content = "\n".join(buffer)
             parsed_dict = parse_dict(dict_content)
             ET.SubElement(xml_root, "item").text = str(parsed_dict)
             buffer = []
