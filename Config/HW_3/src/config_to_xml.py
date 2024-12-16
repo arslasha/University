@@ -99,6 +99,15 @@ def parse_config(content):
             return None
         return line
 
+    # Этап 1: Сбор всех определений констант
+    for line in content.splitlines():
+        line = line.strip()
+        if not line or line.startswith("!"):  # Пропускаем пустые строки и комментарии
+            continue
+        if "->" in line:  # Обрабатываем только строки с константами
+            parse_line(line)
+
+    # Этап 2: Обработка остальных строк с использованием собранных констант
     xml_root = ET.Element("config")
     buffer = []
     in_dict = False
@@ -106,6 +115,8 @@ def parse_config(content):
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith("!"):  # Пропускаем пустые строки и комментарии
+            continue
+        if "->" in line:  # Пропускаем уже обработанные определения констант
             continue
         if line == "{":  # Начало словаря
             in_dict = True
@@ -118,7 +129,7 @@ def parse_config(content):
             buffer = []
         elif in_dict:  # Добавляем строки внутрь словаря
             buffer.append(line)
-        else:  # Обрабатываем строки с константами
+        else:  # Обрабатываем обычные строки
             parsed = parse_line(line)
             if parsed is not None:
                 ET.SubElement(xml_root, "item").text = str(parsed)
