@@ -1,167 +1,98 @@
-import argparse
 import re
+import sys
+import argparse
 import xml.etree.ElementTree as ET
 
-def parse_config(content):
-    """Парсинг конфигурационного файла и конвертация в XML."""
-    constants = {}  # Словарь для хранения определенных констант
 
-    def parse_value(value):
-        """
-        Разбор значения строки, включая числа, строки, списки, словари и выражения с константами.
-        """
-        value = value.strip()
-        if value.isdigit():  # Целое число
-            return int(value)
-        elif re.match(r"^\d+\.\d+$", value):  # Число с плавающей точкой
-            return float(value)
-        elif value.startswith("[[") and value.endswith("]]"):  # Строка в формате [[...]]
-            return value[2:-2]
-        elif value.startswith("(list") and value.endswith(")"):  # Список значений
-            items = re.findall(r"\[\[.*?\]\]|\d+|\d+\.\d+", value[5:-1])
-            return [parse_value(item) for item in items]
-        elif value.startswith("{") and value.endswith("}"):  # Вложенный словарь
-            return parse_dict(value[1:-1])
-        elif re.search(r"\|.*?\|", value):  # Выражение с константами
-            return evaluate_expression(value)
-        else:
-            raise ValueError(f"Invalid value: {value}")
+class ConfigParser:
+    def __init__(self, content):
+        self.content = content
+        self.data = {}
+        self.variables = {}
 
-    def evaluate_expression(expression):
-        """
-        Разбор и вычисление выражений, содержащих константы и арифметические операции.
-        Например: |mass| * |acceleration|.
-        """
-        # Заменяем константы в выражении их значениями из словаря
-        def replace_constant(match):
-            const_name = match.group(1)
-            if const_name in constants:
-                return str(constants[const_name])
-            raise ValueError(f"Undefined constant: {const_name}")
+    def parse(self):
+        # Удаляем комментарии
+        content_no_comments = re.sub(r'!.*', '', self.content)
 
-        # Шаблон для поиска констант между символами |...|
-        expression = re.sub(r"\|(\w+)\|", replace_constant, expression)
+        # Парсим списки
+        list_matches = re.findall(
+            r'\(list\s+([\s\S]+?)\)', content_no_comments)
+        for list_match in list_matches:
+            items = re.findall(r'\[\[(.*?)\]\]', list_match)
+            for i in range(0, len(items), 2):
+                if i + 1 < len(items):
+                    key, value = items[i], items[i + 1]
+                    self.variables[key] = value
 
-        try:
-            # Безопасное вычисление арифметического выражения
-            return eval(expression, {"__builtins__": None}, {})
-        except Exception as e:
-            raise ValueError(f"Invalid arithmetic expression: {expression}. Error: {e}")
+        # Парсим блоки и присваивания
+        block_match = re.search(r'\{([\s\S]+?)\}', content_no_comments)
+        if block_match:
+            block_content = block_match.group(1)
+            for line in block_content.split(';'):
+                line = line.strip()
+                if line:
+                    self._parse_line(line)
 
-    def parse_dict(content):
-        """
-        Разбор словаря вида:
-        key1 = value1;
-        key2 = { ... };
-        """
-        result = {}
-        buffer = ""
-        nesting = 0
+        # Выполняем арифметические операции
+        self._resolve_math_expressions()
 
-        for line in content.splitlines():
-            line = line.strip()
-            if not line:
-                continue
+    def _parse_line(self, line):
+        # Пример: host = [[localhost]]
+        key_value_match = re.match(r'(\w+)\s*=\s*(.+)', line)
+        if key_value_match:
+            key, value = key_value_match.groups()
+            if '[[[' in value and ']]]' in value:
+                value = re.search(r'\[\[\[(.*?)\]\]\]', value).group(1)
+            elif '[[' in value and ']]' in value:
+                value = re.search(r'\[\[(.*?)\]\]', value).group(1)
+            elif '{' in value and '}' in value:
+                nested_parser = ConfigParser(value)
+                nested_parser.parse()
+                value = nested_parser.data
+            self.variables[key] = value
 
-            if nesting == 0:
-                if line.endswith("{"):  # Начало вложенного словаря
-                    nesting += 1
-                    buffer = line[:-1].strip() + " "
-                else:  # Простой ключ-значение
-                    match = re.match(r"(\w+)\s*=\s*(.+);", line)
-                    if not match:
-                        raise ValueError(f"Invalid dictionary entry: {line}")
-                    key, value = match.groups()
-                    result[key.strip()] = parse_value(value.strip())
-            else:  # Вложенный словарь
-                if line == "}":
-                    nesting -= 1
-                    result[buffer.strip()] = parse_dict("\n".join(buffer.splitlines()[1:]))
-                    buffer = ""
-                else:
-                    buffer += line + "\n"
+    def _resolve_math_expressions(self):
+        # Пример: force = |mass| * |acceleration|
+        for key, value in list(self.variables.items()):
+            if isinstance(value, str) and re.search(r'\|.*?\|', value):
+                resolved_value = value
+                for var in re.findall(r'\|(.*?)\|', value):
+                    if var in self.variables:
+                        resolved_value = resolved_value.replace(
+                            f'|{var}|', str(self.variables[var]))
+                try:
+                    self.variables[key] = eval(resolved_value)
+                except Exception as e:
+                    print(f"Ошибка вычисления для {key}: {e}")
 
-        if buffer:
-            raise ValueError(f"Unclosed dictionary or invalid syntax in: {buffer}")
+    def to_xml(self):
+        root = ET.Element('config')
+        for key, value in self.variables.items():
+            item = ET.SubElement(root, 'item')  # создаем простой тег <item>
+            # формат текста: "ключ : значение"
+            item.text = f"{key} : {value}"
+        return ET.tostring(root, encoding='unicode')
 
-        return result
-
-    def parse_line(line):
-        """
-        Разбор строк, содержащих определения переменных и констант.
-        Например: 10 -> mass.
-        """
-        if line.startswith("!"):  # Строка комментария
-            return None
-        if "->" in line:  # Определение константы
-            value, name = map(str.strip, line.split("->"))
-            constants[name] = parse_value(value)
-            return None
-        return line
-
-    # Этап 1: Сбор всех определений констант
-    for line in content.splitlines():
-        line = line.strip()
-        if not line or line.startswith("!"):  # Пропускаем пустые строки и комментарии
-            continue
-        if "->" in line:  # Обрабатываем только строки с константами
-            parse_line(line)
-
-    # Этап 2: Обработка остальных строк с использованием собранных констант
-    xml_root = ET.Element("config")
-    buffer = []
-    in_dict = False
-
-    for line in content.splitlines():
-        line = line.strip()
-        if not line or line.startswith("!"):  # Пропускаем пустые строки и комментарии
-            continue
-        if "->" in line:  # Пропускаем уже обработанные определения констант
-            continue
-        if line == "{":  # Начало словаря
-            in_dict = True
-            buffer = []
-        elif line == "}":  # Конец словаря
-            in_dict = False
-            dict_content = "\n".join(buffer)
-            parsed_dict = parse_dict(dict_content)
-            ET.SubElement(xml_root, "item").text = str(parsed_dict)
-            buffer = []
-        elif in_dict:  # Добавляем строки внутрь словаря
-            buffer.append(line)
-        else:  # Обрабатываем обычные строки
-            parsed = parse_line(line)
-            if parsed is not None:
-                ET.SubElement(xml_root, "item").text = str(parsed)
-
-    return xml_root
-
-def config_to_xml(file_path):
-    """
-    Чтение файла конфигурации и конвертация его в XML.
-    """
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    try:
-        xml_root = parse_config(content)
-        return ET.tostring(xml_root, encoding="unicode", method="xml")
-    except ValueError as e:
-        print(f"Error: {e}")
-        return ""
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        return ""
 
 def main():
-    """Основная функция для запуска скрипта."""
-    parser = argparse.ArgumentParser(description="Convert config to XML.")
-    parser.add_argument("file", help="Path to the config file.")
+    # Парсим аргументы командной строки
+    parser = argparse.ArgumentParser(
+        description="Учебный конфигурационный язык -> XML")
+    parser.add_argument("file", help="Путь к входному файлу конфигурации")
     args = parser.parse_args()
 
-    xml_output = config_to_xml(args.file)
-    if xml_output:
-        print(xml_output)
+    try:
+        with open(args.file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            config_parser = ConfigParser(content)
+            config_parser.parse()
+            xml_output = config_parser.to_xml()
+            print(xml_output)
+    except FileNotFoundError:
+        print(f"Ошибка: файл {args.file} не найден.")
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+
 
 if __name__ == "__main__":
     main()
