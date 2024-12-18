@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Импорт плагина
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // Импорт плагина для извлечения CSS
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подключили плагин
 
 module.exports = {
   entry: './src/scripts/index.js', // Входная точка для JavaScript
@@ -41,6 +44,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'main.css', // Имя выходного CSS файла
     }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+    new CleanWebpackPlugin(), // использовали плагин
   ],
   devServer: {
     static: path.resolve(__dirname, 'dist'), // Папка для сервера разработки
