@@ -8,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/arslasha/University/tree/main/Frontend_prak/Project_6"
   },
-  "homepage": "https://github.com/AstreyaJulia/mesto#readme",
   "scripts": {
     "build": "rimraf dist && webpack --mode production",
     "dev": "webpack serve",
