@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dependency-visualizer
+Version: 1.0.0
+Summary: A tool to visualize Maven package dependencies in Mermaid format
+Home-page: https://github.com/your-repo/dependency-visualizer
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Keywords: maven dependencies visualization mermaid
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
