@@ -1,4 +1,0 @@
-(list [[dark_mode]] [[true]] [[version]] [[1.0.0]])
-! Комментарий: настройки UI
-[[dark_mode]] -> theme;
-|theme| -> current_theme;

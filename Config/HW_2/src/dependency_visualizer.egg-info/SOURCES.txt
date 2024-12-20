@@ -1,8 +1,0 @@
-README.md
-setup.py
-src/dependency_visualizer.egg-info/PKG-INFO
-src/dependency_visualizer.egg-info/SOURCES.txt
-src/dependency_visualizer.egg-info/dependency_links.txt
-src/dependency_visualizer.egg-info/entry_points.txt
-src/dependency_visualizer.egg-info/requires.txt
-src/dependency_visualizer.egg-info/top_level.txt

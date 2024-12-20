@@ -1,4 +1,0 @@
-[settings]
-vfs_path = "filesystem.zip"    # Путь к виртуальной файловой системе
-log_path = "log.csv"           # Путь к лог-файлу
-start_script = "startup.sh"      # Путь к стартовому скрипту
