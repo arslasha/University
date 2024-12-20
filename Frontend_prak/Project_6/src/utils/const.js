@@ -3,10 +3,10 @@
  */
 export const apiSettings = {
   // Базовый URL сервера, куда будут отправляться запросы
-  serverURL: 'https://mesto.nomoreparties.co/v1/frontend-st-cohort-201',
+  serverURL: 'https://mesto.nomoreparties.co/v1/apf-cohort-202',
   headers: {
     // Токен авторизации для идентификации пользователя
-    authorization: '44e0a939-1df4-4135-82f7-f4c1f6e4b2f3',
+    authorization: 'e6ad1120-aac6-4dfc-b513-df0ce9d53be0',
     // Указывает, что данные передаются в формате JSON
     'Content-Type': 'application/json'
   }
