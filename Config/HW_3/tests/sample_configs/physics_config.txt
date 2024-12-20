@@ -1,0 +1,5 @@
+{
+    mass = 1000;
+    acceleration = 9.8;
+    force = |mass| * |acceleration|;
+}

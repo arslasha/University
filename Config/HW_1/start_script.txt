@@ -1,0 +1,2 @@
+ls
+cd dir1

@@ -1,0 +1,2 @@
+[console_scripts]
+dependency-visualizer = src.main:main
